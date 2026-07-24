@@ -1,0 +1,444 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO+VnfbW2carxXmizjcMVW/",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/aniii052/DMPM-lab-24cseaiml052/blob/main/experiment-2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jKhKiR2hP8gH",
+        "outputId": "7c8c4037-101d-4e8b-b822-52d1692659e1"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mean = 30.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Find mean of data points\n",
+        "\n",
+        "data = [10, 20, 30, 40, 50]\n",
+        "total = 0\n",
+        "\n",
+        "for i in data:\n",
+        "    total = total + i\n",
+        "mean = total / len(data)\n",
+        "\n",
+        "print(\"Mean =\", mean)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to find average using function\n",
+        "\n",
+        "def average(data):\n",
+        "    return sum(data) / len(data)\n",
+        "\n",
+        "data = [10, 20, 30, 40, 50]\n",
+        "\n",
+        "print(\"Average =\", average(data))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zzAqxUT0QMmG",
+        "outputId": "d46260f9-fe67-4fed-e64b-97c52b2add0d"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Average = 30.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to find median without using functions\n",
+        "\n",
+        "data = [10, 20, 30, 40, 50]\n",
+        "\n",
+        "data.sort()\n",
+        "n = len(data)\n",
+        "\n",
+        "if n % 2 == 0:\n",
+        "    median = (data[n//2 - 1] + data[n//2]) / 2\n",
+        "else:\n",
+        "    median = data[n//2]\n",
+        "\n",
+        "print(\"Median =\", median)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "12fyjIvYQT5A",
+        "outputId": "2872ad2b-7d27-4065-ae2a-fba6f5e9d2e2"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Median = 30\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to find median using function\n",
+        "\n",
+        "def median(data):\n",
+        "    data.sort()\n",
+        "    n = len(data)\n",
+        "\n",
+        "    if n % 2 == 0:\n",
+        "        return (data[n//2 - 1] + data[n//2]) / 2\n",
+        "    else:\n",
+        "        return data[n//2]\n",
+        "\n",
+        "data = [10, 20, 30, 40, 50]\n",
+        "\n",
+        "print(\"Median =\", median(data))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vYJYaoRYQYQm",
+        "outputId": "88f7dfaf-66cb-407d-9bf0-6cdea30e4a6c"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Median = 30\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to find mode without using function\n",
+        "\n",
+        "data = [1, 2, 2, 3, 4, 2, 5]\n",
+        "\n",
+        "mode = data[0]\n",
+        "max_count = 0\n",
+        "\n",
+        "for i in data:\n",
+        "    count = 0\n",
+        "    for j in data:\n",
+        "        if i == j:\n",
+        "            count += 1\n",
+        "    if count > max_count:\n",
+        "        max_count = count\n",
+        "        mode = i\n",
+        "\n",
+        "print(\"Mode =\", mode)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ya9kNLkEQbsE",
+        "outputId": "cc046d26-f95f-40f5-c92f-d251052f3c4f"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mode = 2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to find mode using function\n",
+        "\n",
+        "def mode(data):\n",
+        "    max_count = 0\n",
+        "    mode_value = data[0]\n",
+        "\n",
+        "    for i in data:\n",
+        "        count = data.count(i)\n",
+        "        if count > max_count:\n",
+        "            max_count = count\n",
+        "            mode_value = i\n",
+        "\n",
+        "    return mode_value\n",
+        "\n",
+        "data = [1, 2, 2, 3, 4, 2, 5]\n",
+        "\n",
+        "print(\"Mode =\", mode(data))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IGHw2eokQnbi",
+        "outputId": "32621700-a9cd-4a95-c9a7-09c26c16ce36"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mode = 2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to find variance without using function\n",
+        "\n",
+        "data = [10, 20, 30, 40, 50]\n",
+        "\n",
+        "n = len(data)\n",
+        "total = 0\n",
+        "\n",
+        "for i in data:\n",
+        "    total += i\n",
+        "\n",
+        "mean = total / n\n",
+        "\n",
+        "variance = 0\n",
+        "\n",
+        "for i in data:\n",
+        "    variance += (i - mean) ** 2\n",
+        "\n",
+        "variance = variance / n\n",
+        "\n",
+        "print(\"Variance =\", variance)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PAuPHeT7Qq4L",
+        "outputId": "ada28844-6b83-4b5a-d285-d296c84b394c"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Variance = 200.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to find variance using function\n",
+        "\n",
+        "def variance(data):\n",
+        "    mean = sum(data) / len(data)\n",
+        "    var = 0\n",
+        "\n",
+        "    for i in data:\n",
+        "        var += (i - mean) ** 2\n",
+        "\n",
+        "    return var / len(data)\n",
+        "\n",
+        "data = [10, 20, 30, 40, 50]\n",
+        "\n",
+        "print(\"Variance =\", variance(data))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "v-D2DoiMQwHJ",
+        "outputId": "d3b395ac-8eb9-42a9-e6ec-8fd02a4ec5a4"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Variance = 200.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to find standard deviation without using function\n",
+        "\n",
+        "data = [10, 20, 30, 40, 50]\n",
+        "\n",
+        "n = len(data)\n",
+        "mean = sum(data) / n\n",
+        "\n",
+        "variance = 0\n",
+        "for i in data:\n",
+        "    variance += (i - mean) ** 2\n",
+        "\n",
+        "variance = variance / n\n",
+        "std = variance ** 0.5\n",
+        "\n",
+        "print(\"Standard Deviation =\", std)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "L-xS8FpQRCMZ",
+        "outputId": "54a1ce4b-20f2-4e07-fbab-fce56fe56f97"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Standard Deviation = 14.142135623730951\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to find standard deviation using function\n",
+        "\n",
+        "def standard_deviation(data):\n",
+        "    mean = sum(data) / len(data)\n",
+        "\n",
+        "    variance = 0\n",
+        "    for i in data:\n",
+        "        variance += (i - mean) ** 2\n",
+        "\n",
+        "    variance = variance / len(data)\n",
+        "    return variance ** 0.5\n",
+        "\n",
+        "data = [10, 20, 30, 40, 50]\n",
+        "\n",
+        "print(\"Standard Deviation =\", standard_deviation(data))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3kMqWKVJRLG8",
+        "outputId": "2a68b390-2b36-4a6e-a589-a2b5f96faa59"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Standard Deviation = 14.142135623730951\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to find variance and standard deviation\n",
+        "\n",
+        "n = int(input(\"Enter the number of data points: \"))\n",
+        "\n",
+        "data = []\n",
+        "\n",
+        "for i in range(n):\n",
+        "    x = float(input(\"Enter data point: \"))\n",
+        "    data.append(x)\n",
+        "\n",
+        "mean = sum(data) / n\n",
+        "\n",
+        "variance = 0\n",
+        "\n",
+        "for i in data:\n",
+        "    variance += (i - mean) ** 2\n",
+        "\n",
+        "variance = variance / n\n",
+        "std = variance ** 0.5\n",
+        "\n",
+        "print(\"Variance =\", variance)\n",
+        "print(\"Standard Deviation =\", std)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_G_jBRmYRO69",
+        "outputId": "ac855ea5-98f1-4871-a328-93634534ec79"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the number of data points: 5\n",
+            "Enter data point: 10\n",
+            "Enter data point: 20\n",
+            "Enter data point: 30\n",
+            "Enter data point: 40\n",
+            "Enter data point: 50\n",
+            "Variance = 200.0\n",
+            "Standard Deviation = 14.142135623730951\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
