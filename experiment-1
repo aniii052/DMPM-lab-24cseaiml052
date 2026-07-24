@@ -1,0 +1,394 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM8Rr8aJ2+t/z59L6WAtdnI",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/aniii052/DMPM-lab-24cseaiml052/blob/main/experiment-1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2OtYPLzdMtQE",
+        "outputId": "181353db-b9ad-42f1-f163-baaaa570f146"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 12\n",
+            "Enter second number: 5\n",
+            "Enter third number: 8\n",
+            "Largest number = 12\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Program to find the largest of three numbers\n",
+        "\n",
+        "a = int(input(\"Enter first number: \"))\n",
+        "b = int(input(\"Enter second number: \"))\n",
+        "c = int(input(\"Enter third number: \"))\n",
+        "\n",
+        "if a >= b and a >= c:\n",
+        "    print(\"Largest number =\", a)\n",
+        "elif b >= a and b >= c:\n",
+        "    print(\"Largest number =\", b)\n",
+        "else:\n",
+        "    print(\"Largest number =\", c)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to check whether a number is even or odd\n",
+        "\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "\n",
+        "if num % 2 == 0:\n",
+        "    print(\"The number is Even\")\n",
+        "else:\n",
+        "    print(\"The number is Odd\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AYGSBRwHNV4w",
+        "outputId": "1e00d90c-4f11-488b-d075-abaf0cef87a3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 12\n",
+            "The number is Even\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to swap two numbers without using a third variable\n",
+        "\n",
+        "a = int(input(\"Enter first number: \"))\n",
+        "b = int(input(\"Enter second number: \"))\n",
+        "\n",
+        "a, b = b, a\n",
+        "\n",
+        "print(\"After swapping:\")\n",
+        "print(\"First number =\", a)\n",
+        "print(\"Second number =\", b)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "g4hXgAkwNcto",
+        "outputId": "bd1f11e6-d718-425b-e9a1-5da040b385d3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 12\n",
+            "Enter second number: 5\n",
+            "After swapping:\n",
+            "First number = 5\n",
+            "Second number = 12\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to check whether a string is palindrome\n",
+        "\n",
+        "text = input(\"Enter a string: \")\n",
+        "\n",
+        "if text == text[::-1]:\n",
+        "    print(\"The string is a Palindrome\")\n",
+        "else:\n",
+        "    print(\"The string is not a Palindrome\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Jcb5wIThNiI6",
+        "outputId": "8c6136aa-b8bf-4d51-a2c1-4034fa6127ce"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a string: madam\n",
+            "The string is a Palindrome\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Simple Calculator Program\n",
+        "\n",
+        "a = float(input(\"Enter first number: \"))\n",
+        "b = float(input(\"Enter second number: \"))\n",
+        "\n",
+        "print(\"Choose Operation:\")\n",
+        "print(\"1. Addition\")\n",
+        "print(\"2. Subtraction\")\n",
+        "print(\"3. Multiplication\")\n",
+        "print(\"4. Division\")\n",
+        "\n",
+        "choice = int(input(\"Enter your choice (1-4): \"))\n",
+        "\n",
+        "if choice == 1:\n",
+        "    print(\"Result =\", a + b)\n",
+        "elif choice == 2:\n",
+        "    print(\"Result =\", a - b)\n",
+        "elif choice == 3:\n",
+        "    print(\"Result =\", a * b)\n",
+        "elif choice == 4:\n",
+        "    if b != 0:\n",
+        "        print(\"Result =\", a / b)\n",
+        "    else:\n",
+        "        print(\"Division by zero is not allowed.\")\n",
+        "else:\n",
+        "    print(\"Invalid choice.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vBJqi-DNNlVl",
+        "outputId": "c59d566b-1f6f-4a9b-f79f-2c1eb861856f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 22\n",
+            "Enter second number: 5\n",
+            "Choose Operation:\n",
+            "1. Addition\n",
+            "2. Subtraction\n",
+            "3. Multiplication\n",
+            "4. Division\n",
+            "Enter your choice (1-4): 3\n",
+            "Result = 110.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to count vowels in a string\n",
+        "\n",
+        "text = input(\"Enter a string: \")\n",
+        "\n",
+        "count = 0\n",
+        "\n",
+        "for ch in text.lower():\n",
+        "    if ch in \"aeiou\":\n",
+        "        count += 1\n",
+        "\n",
+        "print(\"Number of vowels =\", count)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8at3LyfhNtn2",
+        "outputId": "e2f33ff5-6fc4-4c0c-c74d-51871c373df1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a string: anisha\n",
+            "Number of vowels = 3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to check whether a number is prime\n",
+        "\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "\n",
+        "if num > 1:\n",
+        "    for i in range(2, num):\n",
+        "        if num % i == 0:\n",
+        "            print(num, \"is not a Prime Number\")\n",
+        "            break\n",
+        "    else:\n",
+        "        print(num, \"is a Prime Number\")\n",
+        "else:\n",
+        "    print(num, \"is not a Prime Number\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "89HM3zi3Nym6",
+        "outputId": "59ca92be-29af-4269-d6b6-b5d0d91dafe7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 13\n",
+            "13 is a Prime Number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to find the sum of digits of a number\n",
+        "\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "\n",
+        "sum = 0\n",
+        "\n",
+        "while num > 0:\n",
+        "    digit = num % 10\n",
+        "    sum = sum + digit\n",
+        "    num = num // 10\n",
+        "\n",
+        "print(\"Sum of digits =\", sum)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hVPkM0bSN2wB",
+        "outputId": "c90b4b55-07c0-4dd7-8112-de9c787beb73"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 1234\n",
+            "Sum of digits = 10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to reverse a number\n",
+        "\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "\n",
+        "reverse = 0\n",
+        "\n",
+        "while num > 0:\n",
+        "    digit = num % 10\n",
+        "    reverse = reverse * 10 + digit\n",
+        "    num = num // 10\n",
+        "\n",
+        "print(\"Reversed number =\", reverse)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KDPtUyIwN7Dg",
+        "outputId": "05b46eaa-0c9c-4ff4-bca7-efdfbd9c4df9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 1234\n",
+            "Reversed number = 4321\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Program to find the factorial of a number\n",
+        "\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "\n",
+        "fact = 1\n",
+        "\n",
+        "for i in range(1, num + 1):\n",
+        "    fact = fact * i\n",
+        "\n",
+        "print(\"Factorial =\", fact)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "H60-8kIzN_Sc",
+        "outputId": "c3241b1c-920f-44b2-edc0-fd823ae31655"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 10\n",
+            "Factorial = 3628800\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
